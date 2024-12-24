@@ -73,7 +73,7 @@ export default function Home() {
   }, [category])
 
   return (
-    <View style={{ flex: 1, backgroundColor: "#CECECE" }}>
+    <View style={{ flex: 1 }}>
       <Categories
         data={categories}
         onSelect={setCategory}
@@ -108,27 +108,30 @@ export default function Home() {
             }}
             image={require("@/assets/pin.png")}
           >
+            {/* <Callout onPress={() => console.log(item.name)}> */}
             <Callout onPress={() => router.navigate(`/market/${item.id}`)}>
-              <View>
+              <View style={{ padding: 10, backgroundColor: "#754141" }}>
+
                 <Text
-                  style={{
-                    fontSize: 14,
-                    color: colors.gray[600],
-                    fontFamily: fontFamily.medium,
-                  }}
+                  // style={{
+                  //   fontSize: 10,
+                  //   color: colors.gray[600],
+                  //   fontFamily: fontFamily.bold,
+                  // }}
                 >
                   {item.name}
                 </Text>
 
                 <Text
-                  style={{
-                    fontSize: 12,
-                    color: colors.gray[600],
-                    fontFamily: fontFamily.regular,
-                  }}
+                  // style={{
+                  //   fontSize: 8,
+                  //   color: colors.gray[600],
+                  //   fontFamily: fontFamily.regular,
+                  // }}
                 >
                   {item.address}
                 </Text>
+
               </View>
             </Callout>
           </Marker>

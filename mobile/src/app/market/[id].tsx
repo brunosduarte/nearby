@@ -26,7 +26,7 @@ export default function Market() {
   const params = useLocalSearchParams<{ id: string }>()
 
   const qrLock = useRef(false)
-  console.log(params.id)
+  console.log('params.id',params.id)
 
   async function fetchMarket() {
     try {
